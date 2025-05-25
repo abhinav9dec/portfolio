@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhinav Kumar | Portfolio</title>
-  
+  <link href="style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 <section data-animate class="about">
   <h2>About Me</h2>
   <div class="about-content">
-    <img src="WhatsApp Image 2025-05-25 at 13.59.56_31ce5e91.jpg"></img>
+    <img src="WhatsApp Image 2025-05-25 at 13.59.56_31ce5e91.jpg" alt="Abhinav Kumar" />
     <p>I'm a passionate developer and innovator with a focus on creating meaningful digital experiences. My journey in technology spans across various domains including web development, machine learning, and desktop applications.</p>
     <p>With a strong foundation in modern technologies and a keen eye for user experience, I strive to build solutions that not only solve problems but also delight users. I believe in the power of clean code, thoughtful design, and continuous learning.</p>
     <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>
@@ -32,41 +32,26 @@
 
   <div class="video-card">
     <h3>Five Ring Theory Introduction</h3>
-    <div class="video-container">
-      <div class="video-placeholder" onclick="loadVideo(this, 'https://drive.google.com/uc?export=download&id=1PLJAPwovWJH4_0Fwgq0TBj9l__FtXq9Q')">
-        <div>
-          <div class="play-button">▶</div>
-          <div>Click to load video</div>
-          <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Five Ring Theory Introduction</div>
-        </div>
-      </div>
-    </div>
+    <video controls width="100%" poster="image copy 2.png">
+      <source src="https://drive.google.com/uc?export=download&id=1PLJAPwovWJH4_0Fwgq0TBj9l__FtXq9Q" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 
   <div class="video-card">
     <h3>Sixer Theory Introduction</h3>
-    <div class="video-container">
-      <div class="video-placeholder" onclick="loadVideo(this, 'https://drive.google.com/uc?export=download&id=1RAZvyKUhjZPtFr3WHGjNDBISkZVjN9nN')">
-        <div>
-          <div class="play-button">▶</div>
-          <div>Click to load video</div>
-          <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Sixer Theory Introduction</div>
-        </div>
-      </div>
-    </div>
+    <video controls width="100%" poster="image copy.png">
+      <source src="https://drive.google.com/uc?export=download&id=1RAZvyKUhjZPtFr3WHGjNDBISkZVjN9nN" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 
   <div class="video-card">
     <h3>Final Reflection Video Log</h3>
-    <div class="video-container">
-      <div class="video-placeholder" onclick="loadVideo(this, 'https://drive.google.com/uc?export=download&id=1q2cvwfpqBNi9JIICouib7FNzahaT8_Nn')">
-        <div>
-          <div class="play-button">▶</div>
-          <div>Click to load video</div>
-          <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Final Reflection Video Log</div>
-        </div>
-      </div>
-    </div>
+    <video controls width="100%" poster="image.png">
+      <source src="https://drive.google.com/uc?export=download&id=1q2cvwfpqBNi9JIICouib7FNzahaT8_Nn" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </section>
 
@@ -171,48 +156,6 @@
     const isDark = document.body.classList.contains('dark-mode');
     const btn = document.querySelector('.btn1');
     btn.textContent = isDark ? '☀️' : '🌙';
-  }
-
-  // Video loading function
-  function loadVideo(placeholder, videoUrl) {
-    const container = placeholder.parentElement;
-    
-    // Show loading state
-    placeholder.innerHTML = '<div style="color: white;">Loading video...</div>';
-    
-    // Create video element
-    const video = document.createElement('video');
-    video.controls = true;
-    video.style.width = '100%';
-    video.style.height = 'auto';
-    
-    // Try to load the video
-    const source = document.createElement('source');
-    source.src = videoUrl;
-    source.type = 'video/mp4';
-    
-    video.appendChild(source);
-    
-    // Handle video load events
-    video.addEventListener('loadeddata', function() {
-      container.replaceChild(video, placeholder);
-    });
-    
-    video.addEventListener('error', function() {
-      placeholder.innerHTML = `
-        <div style="color: white; text-align: center;">
-          <div style="font-size: 2em; margin-bottom: 10px;">⚠️</div>
-          <div>Video cannot be loaded</div>
-          <div style="font-size: 0.8em; margin-top: 10px; opacity: 0.8;">
-            Google Drive direct links may not work for video streaming.<br>
-            Please host videos on a proper video hosting service.
-          </div>
-        </div>
-      `;
-    });
-    
-    // Start loading
-    video.load();
   }
 
   // Form submission handler
