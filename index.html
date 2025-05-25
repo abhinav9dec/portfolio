@@ -5,27 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhinav Kumar | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="JavaScript" href="script.js">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  });
-
-  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
-</script>
 
 <header>
-    <button class="btn1" onclick="toggleDarkMode()">🌙</button>
-
+  <button class="btn1" onclick="toggleDarkMode()">🌙</button>
   <h1>Hello, I'm Abhinav Kumar</h1>
   <p>Passionate about innovation and creating meaningful experiences through technology and design.</p>
   <br>
@@ -55,27 +40,30 @@
 
 <section class="videos">
   <h2>Video Showcase</h2>
+
   <div class="video-card">
     <h3>Five Ring Theory Introduction</h3>
     <p>An overview of the innovative Five Ring Theory framework and its applications in strategic analysis.</p>
     <video controls poster="image copy 2.png">
-      <source src="IMG_5485.MP4" type="video/mp4">
+      <source src="https://drive.google.com/uc?export=download&id=1PLJAPwovWJH4_0Fwgq0TBj9l__FtXq9Q" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
   <div class="video-card">
     <h3>Sixer Theory Introduction</h3>
     <p>Exploring the Sixer Theory methodology and how it can be applied to solve complex problems.</p>
     <video controls poster="image copy.png">
-      <source src="IMG_5486.MP4" type="video/mp4">
+      <source src="https://drive.google.com/uc?export=download&id=1RAZvyKUhjZPtFr3WHGjNDBISkZVjN9nN" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
   <div class="video-card">
     <h3>Final Reflection Video Log</h3>
     <p>A comprehensive reflection on the journey, insights gained, and future directions.</p>
     <video controls poster="image.png">
-      <source src="IMG_5487.MP4" type="video/mp4">
+      <source src="https://drive.google.com/uc?export=download&id=1q2cvwfpqBNi9JIICouib7FNzahaT8_Nn" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -112,7 +100,7 @@
 
   <div class="grid">
     <div class="half">
-      <p><strong>Email:</strong> <a href="mailto:contact@Abhinav.stubborn.com">Abhinav.stubborn@gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:abhiichaudhary00123@gmail.com">abhiichaudhary00123@gmail.com</a></p>
       <p><strong>Phone:</strong> (+91)7017759291</p>
       <p><strong>Location:</strong> Dehradun, India</p>
       <div class="social-links">
