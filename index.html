@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhinav Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="JavaScript" href="script.js">
+</head>
+<body>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+
+<header>
+    <button class="btn1" onclick="toggleDarkMode()">🌙</button>
+
+  <h1>Hello, I'm Abhinav Kumar</h1>
+  <p>Passionate about innovation and creating meaningful experiences through technology and design.</p>
+  <br>
+  <a href="#contact" class="btn">Get in Touch</a>
+  <a href="Abhinav_Kumar_Resume.pdf" class="btn" download>Download Resume</a>
+</header>
+
+<section data-animate class="about">
+  <h2>About Me</h2>
+  <div class="grid">
+    <div class="half">
+      <h3>Abhinav Kumar</h3>
+      <p>I am a passionate professional dedicated to innovation and excellence. My journey in the field has equipped me with unique insights into developing effective solutions that bridge theory and practice.</p>
+      <ul>
+        <li>Research</li>
+        <li>Strategy</li>
+        <li>Innovation</li>
+        <li>Leadership</li>
+        <li>Analysis</li>
+      </ul>
+    </div>
+    <div class="half">
+      <img src="WhatsApp Image 2025-05-25 at 13.59.56_31ce5e91.jpg" alt="Abhinav Kumar Portrait" class="profile-img">
+    </div>
+  </div>
+</section>
+
+<section class="videos">
+  <h2>Video Showcase</h2>
+  <div class="video-card">
+    <h3>Five Ring Theory Introduction</h3>
+    <p>An overview of the innovative Five Ring Theory framework and its applications in strategic analysis.</p>
+    <video controls poster="image copy 2.png">
+      <source src="IMG_5485.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>Sixer Theory Introduction</h3>
+    <p>Exploring the Sixer Theory methodology and how it can be applied to solve complex problems.</p>
+    <video controls poster="image copy.png">
+      <source src="IMG_5486.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-card">
+    <h3>Final Reflection Video Log</h3>
+    <p>A comprehensive reflection on the journey, insights gained, and future directions.</p>
+    <video controls poster="image.png">
+      <source src="IMG_5487.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section class="projects">
+  <h2>My Projects</h2>
+
+  <div class="project-card">
+    <h3>Student Management System <small>(Desktop Application)</small></h3>
+    <p>Nov 2023 – Jan 2024</p>
+    <p>Developed a system for managing student data including registration, attendance, and grades. Included secure role-based access and an intuitive UI.</p>
+    <p><strong>Tech:</strong> Java, MySQL, Swing/JavaFX</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Weather Application <small>(Web Application)</small></h3>
+    <p>May 2024 – Aug 2024</p>
+    <p>Built a responsive weather app with API integration, city search, and real-time data. Works seamlessly across devices.</p>
+    <p><strong>Tech:</strong> React, JavaScript</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Diabetes Prediction System <small>(Machine Learning)</small></h3>
+    <p>Oct 2024 – Dec 2024</p>
+    <p>Used Random Forest to build a medical prediction tool. Included preprocessing for accuracy and an accessible web interface.</p>
+    <p><strong>Tech:</strong> Machine Learning, Flask, JavaScript</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get in Touch</h2>
+  <p>I'm always open to discussing new projects, opportunities, or partnerships. Reach out using the form or the contact details below.</p>
+
+  <div class="grid">
+    <div class="half">
+      <p><strong>Email:</strong> <a href="mailto:contact@Abhinav.stubborn.com">Abhinav.stubborn@gmail.com</a></p>
+      <p><strong>Phone:</strong> (+91)7017759291</p>
+      <p><strong>Location:</strong> Dehradun, India</p>
+      <div class="social-links">
+        <strong>Connect:</strong>
+        <a href="https://github.com/abhinav9dec">GitHub</a>
+      </div>
+    </div>
+    <div class="half">
+      <form>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="How can I help you?" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>AK.Portfolio</strong> — Creating meaningful experiences through innovation and strategic thinking.</p>
+  <div class="grid" style="justify-content: center; padding: 1rem 0;">
+    <div class="half">
+      <h4>Quick Links</h4>
+      <p>Home | About | Videos | Projects | Contact</p>
+    </div>
+    <div class="half">
+      <h4>Newsletter</h4>
+      <input type="email" placeholder="Your email" />
+      <button class="btn">Subscribe</button>
+    </div>
+  </div>
+  <p>© 2025 Abhinav Kumar. All rights reserved.</p>
+  <p><a href="#" class="footer-link">Privacy Policy</a> · <a href="#" class="footer-link">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>

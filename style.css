@@ -1,0 +1,303 @@
+/* ====================
+   Global Styles
+==================== */
+:root {
+  --primary-color: #007BFF;
+  --dark-bg: #111;
+  --light-bg: #f4f4f8;
+  --card-bg: #fff;
+  --text-color: #333;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --radius: 10px;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: var(--light-bg);
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ====================
+   Layout & Sections
+==================== */
+header,
+footer,
+section {
+  padding: 3rem 2rem;
+  animation: fadeSlideUp 0.8s ease-in-out both;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====================
+   Header
+==================== */
+header {
+  background: linear-gradient(135deg, var(--dark-bg), #222);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+/* ====================
+   Typography
+==================== */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+/* ====================
+   Buttons
+==================== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+}
+
+/* ====================
+   Cards
+==================== */
+.project-card,
+.video-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================
+   Videos
+==================== */
+video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  background: #000;
+}
+
+/* ====================
+   Grid & Layout
+==================== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.half {
+  flex: 1 1 48%;
+}
+
+@media (max-width: 768px) {
+  .half {
+    flex: 1 1 100%;
+  }
+
+  video {
+    max-width: 100%;
+  }
+}
+
+/* ====================
+   Profile Image
+==================== */
+.profile-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* ====================
+   Form
+==================== */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* ====================
+   Footer
+==================== */
+footer {
+  background: #1a1a1a;
+  color: #eee;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 0.95rem;
+}
+
+footer .grid {
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-link,
+.social-links a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 0.6rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* ====================
+   Scroll Animation on Load (Optional JS Required)
+==================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Dark Mode Theme Styles
+========================= */
+body.dark-mode {
+  background: #0e0e0e;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #000, #111);
+  color: #fff;
+}
+
+body.dark-mode section,
+body.dark-mode .project-card,
+body.dark-mode .video-card {
+  background: #1a1a1a;
+  color: #eaeaea;
+}
+
+body.dark-mode .btn {
+  background: #1e90ff;
+  color: white;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
+}
+
+body.dark-mode .btn:hover {
+  background: #0061c2;
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.4);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 6px rgba(30, 144, 255, 0.3);
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #ccc;
+}
+
+body.dark-mode .footer-link,
+body.dark-mode .social-links a {
+  color: #888;
+}
+
+body.dark-mode .footer-link:hover,
+body.dark-mode .social-links a:hover {
+  color: #1e90ff;
+}
