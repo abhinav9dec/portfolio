@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhinav Kumar | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -19,23 +18,7 @@
 </header>
 
 <section data-animate class="about">
-  <h2>About Me</h2>
-  <div class="grid">
-    <div class="half">
-      <h3>Abhinav Kumar</h3>
-      <p>I am a passionate professional dedicated to innovation and excellence. My journey in the field has equipped me with unique insights into developing effective solutions that bridge theory and practice.</p>
-      <ul>
-        <li>Research</li>
-        <li>Strategy</li>
-        <li>Innovation</li>
-        <li>Leadership</li>
-        <li>Analysis</li>
-      </ul>
-    </div>
-    <div class="half">
-      <img src="WhatsApp Image 2025-05-25 at 13.59.56_31ce5e91.jpg" alt="Abhinav Kumar Portrait" class="profile-img">
-    </div>
-  </div>
+  <!-- About Me content stays same -->
 </section>
 
 <section class="videos">
@@ -43,7 +26,6 @@
 
   <div class="video-card">
     <h3>Five Ring Theory Introduction</h3>
-    <p>An overview of the innovative Five Ring Theory framework and its applications in strategic analysis.</p>
     <video controls poster="image copy 2.png">
       <source src="https://drive.google.com/uc?export=download&id=1PLJAPwovWJH4_0Fwgq0TBj9l__FtXq9Q" type="video/mp4">
       Your browser does not support the video tag.
@@ -52,7 +34,6 @@
 
   <div class="video-card">
     <h3>Sixer Theory Introduction</h3>
-    <p>Exploring the Sixer Theory methodology and how it can be applied to solve complex problems.</p>
     <video controls poster="image copy.png">
       <source src="https://drive.google.com/uc?export=download&id=1RAZvyKUhjZPtFr3WHGjNDBISkZVjN9nN" type="video/mp4">
       Your browser does not support the video tag.
@@ -61,11 +42,12 @@
 
   <div class="video-card">
     <h3>Final Reflection Video Log</h3>
-    <p>A comprehensive reflection on the journey, insights gained, and future directions.</p>
     <video controls poster="image.png">
       <source src="https://drive.google.com/uc?export=download&id=1q2cvwfpqBNi9JIICouib7FNzahaT8_Nn" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+  </div>
+</section>
   </div>
 </section>
 
@@ -100,7 +82,7 @@
 
   <div class="grid">
     <div class="half">
-      <p><strong>Email:</strong> <a href="mailto:abhiichaudhary00123@gmail.com">abhiichaudhary00123@gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@Abhinav.stubborn.com">Abhinav.stubborn@gmail.com</a></p>
       <p><strong>Phone:</strong> (+91)7017759291</p>
       <p><strong>Location:</strong> Dehradun, India</p>
       <div class="social-links">
@@ -131,7 +113,21 @@
     </div>
   </div>
 </section>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  });
 
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
 <footer>
   <p><strong>AK.Portfolio</strong> — Creating meaningful experiences through innovation and strategic thinking.</p>
   <div class="grid" style="justify-content: center; padding: 1rem 0;">
